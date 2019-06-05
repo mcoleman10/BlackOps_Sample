@@ -1,0 +1,38 @@
+﻿@model PlattSampleApp.Models.VehicleSummaryViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Vehicle Summary</title>
+</head>
+<body>
+    <div>
+        <h3>Vehicle Summary</h3>
+        <ul>
+            <li>Total Number of Vehicles with Known Cost: @Model.VehicleCount</li>
+            <li>Total Number of Manufacturers: @Model.ManufacturerCount</li>
+        </ul>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Manufacturer Name</td>
+                    <td>Vehicle Count</td>
+                    <td>Average Cost</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var d in Model.Details)
+                {
+                    <tr>
+                        <td>@d.ManufacturerName</td>
+                        <td>@d.VehicleCount</td>
+                        <td>@d.AverageCost.ToString("N2")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

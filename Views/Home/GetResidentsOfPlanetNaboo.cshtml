@@ -1,0 +1,28 @@
+﻿@model PlattSampleApp.Models.PlanetResidentsViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Residents of Planet Naboo</title>
+</head>
+<body>
+    <div>
+        <h3>Residents of Planet Naboo</h3>
+        @foreach (var person in Model.Residents)
+        {
+            <div>
+                <ul>
+                    <li>Name: @person.Name</li>
+                    <li>Gender: @person.Gender</li>
+                    <li>Height: @person.Height cm</li>
+                    <li>Weight: @person.mass kg</li>
+                    <li>Hair Color: @person.Hair_Color</li>
+                    <li>Eye Color: @person.Eye_Color</li>
+                    <li>Skin Color: @person.Skin_Color</li>
+                </ul>
+            </div>
+        }
+    </div>
+</body>
+</html>

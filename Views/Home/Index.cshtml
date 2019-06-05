@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h3>Platt Code Sample - Star Wars App</h3>
+<div class="row-spacer">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="btn btn-default">
+                @Html.ActionLink("See Results", "GetAllPlanets", "Home")
+            </div>
+            <span>Get All Planets - Largest Diameter to Smallest Diameter</span>
+        </div>
+    </div>
+
+</div>
+
+<div class="row-spacer">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="btn btn-default">
+                @Html.ActionLink("See Results", "GetPlanetTwentyTwo", "Home", new {planetid = "22"}, null)
+            </div>
+            <span>Get Details for Planet 22</span>
+        </div>
+    </div>
+</div>
+
+<div class="row-spacer">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="btn btn-default">
+                @Html.ActionLink("See Results", "GetResidentsOfPlanetNaboo", "Home", new {planetname = "Naboo"}, null)
+            </div>
+            <span>Get Residents of Planet Naboo</span>
+        </div>
+    </div>  
+</div>
+
+<div class="row-spacer">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="btn btn-default">
+                @Html.ActionLink("See Results", "VehicleSummary", "Home")
+            </div>
+            <span>Vehicle Manufacturer Summary</span>
+        </div>
+    </div> 
+</div>

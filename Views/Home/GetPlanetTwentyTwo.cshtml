@@ -1,0 +1,24 @@
+﻿@model PlattSampleApp.Models.SinglePlanetViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Details for Planet Number 22</title>
+</head>
+<body>
+    <h3>Details for Planet Number 22</h3>
+    <div>
+        <ul>
+            <li>Planet Name: @Model.Name</li>
+            <li>Length of Day: @Model.Rotation_Period hours</li>
+            <li>Length of Year: @Model.Orbital_Period days</li>
+            <li>Diameter: @Model.Diameter km</li>
+            <li>Climate: @Model.Climate</li>
+            <li>Gravity: @Model.Gravity</li>
+            <li>Surface Water: @Model.Surface_Water %</li>
+            <li>Population: @Int64.Parse(Model.Population).ToString("N0")</li>
+        </ul>
+    </div>
+</body>
+</html>
